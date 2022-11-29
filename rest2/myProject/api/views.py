@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from .models import Car
 
-# Create your views here.
+class ListUser(APIView):
+    def get(self, request, format=None):
+        print(request)
+        print(self)
+        return Response('Hello')
